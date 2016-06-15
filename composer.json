@@ -14,7 +14,9 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
-        "predis/predis":"~1.0"
+        "predis/predis":"~1.0",
+        "andskur/laracrypto": "dev-master",
+        "stormpat/crypto-coin": "dev-master"
     },
     "autoload": {
         "classmap": [
@@ -26,7 +28,8 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/TestCase.php"
+            "tests/TestCase.php",
+            "app/Libraries/cryptoapi-php/cryptobox.class.php"
         ]
     },
     "scripts": {

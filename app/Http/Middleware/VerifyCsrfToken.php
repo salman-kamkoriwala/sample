@@ -13,5 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
+        '/crypto/single',
+    	'/crypto/multi'
     ];
 }
