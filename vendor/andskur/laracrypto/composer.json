@@ -1,0 +1,24 @@
+{
+    "name": "andskur/laracrypto",
+    "description": "Laravel cryptocurrency integration",
+    "keywords": ["laravel", "cryptocurrency", "bitcoin", "blockchain"],
+    "homepage": "https://github.com/andskur/laracrypto",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andskur",
+            "email": "a.skurlatov@gmail.comk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andskur\\Laracrypto\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
