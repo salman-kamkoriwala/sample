@@ -110,7 +110,7 @@
             };
         $.ajax({
             type: "POST",
-            url: "",
+            url: "{{ URL::to('postMessage') }}",
             data: dataString,
             dataType: "json",
             cache : false,

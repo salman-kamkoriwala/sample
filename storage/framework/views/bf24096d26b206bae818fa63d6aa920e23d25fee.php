@@ -37,6 +37,9 @@
     </head>
     <body>
         <div class="container">
+        
+        	<?php echo $__env->yieldContent('navigation'); ?>
+        	
             <div class="content">
                 <div class="title">Laravel 5</div>
             </div>

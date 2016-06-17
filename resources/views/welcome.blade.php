@@ -37,8 +37,11 @@
     </head>
     <body>
         <div class="container">
+        
+        	@yield('navigation')
+        	
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Laravel 5 with CryptoPayment GoURI +  Node + Socket.IO + Express + MySQL + Events Broadcast Examples</div>
             </div>
         </div>
     </body>
