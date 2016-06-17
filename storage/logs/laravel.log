@@ -2042,3 +2042,159 @@ Stack trace:
 #62 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #63 /home/salman/www/examples/sample/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #64 {main}  
+[2016-06-17 04:41:40] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42000] [1049] Unknown database 'sample'' in /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:55
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(55): PDO->__construct('mysql:host=127....', 'root', 'mysql', Array)
+#1 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connection.php(908): call_user_func(Object(Closure))
+#5 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connection.php(776): Illuminate\Database\Connection->getPdo()
+#6 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connection.php(661): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Connection.php(342): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#15 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /home/salman/www/examples/sample/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-06-17 04:57:19] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:MessageController" is not defined.
+
+Did you mean one of these?
+    make:provider
+    make:policy
+    make:request
+    make:seeder
+    make:migration
+    make:test
+    make:model
+    make:middleware
+    make:controller
+    make:console
+    make:event
+    make:job
+    make:listener
+    make:auth' in /home/salman/www/examples/sample/vendor/symfony/console/Application.php:512
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:MessageCon...')
+#1 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-06-17 04:57:35] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:Controller" is not defined.
+
+Did you mean one of these?
+    make:controller
+    make:console
+    make:request
+    make:seeder
+    make:provider
+    make:migration
+    make:policy
+    make:test
+    make:middleware
+    make:event
+    make:job
+    make:listener
+    make:auth
+    make:model' in /home/salman/www/examples/sample/vendor/symfony/console/Application.php:512
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:Controller')
+#1 /home/salman/www/examples/sample/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-06-17 05:01:45] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Html' not found' in /home/salman/www/examples/sample/storage/framework/views/9c0839c616938bf271db7fce19a07c2865b9909e.php:8
+Stack trace:
+#0 {main}  
+[2016-06-17 05:07:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::bindShared()' in /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php:36
+Stack trace:
+#0 {main}  
+[2016-06-17 05:09:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::bindShared()' in /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php:36
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php(21): Illuminate\Html\HtmlServiceProvider->registerHtmlBuilder()
+#4 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(554): Illuminate\Html\HtmlServiceProvider->register()
+#5 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(671): Illuminate\Foundation\Application->register()
+#6 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(651): Illuminate\Foundation\Application->registerDeferredProvider()
+#7 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(627): Illuminate\Foundation\Application->loadDeferredProvider()
+#8 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(225): Illuminate\Foundation\Application->loadDeferredProviders()
+#9 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/salman/www/examples/sample/artisan(0): {main}()
+#12 {main}  
+[2016-06-17 05:11:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::bindShared()' in /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php:36
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php(21): Illuminate\Html\HtmlServiceProvider->registerHtmlBuilder()
+#4 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(554): Illuminate\Html\HtmlServiceProvider->register()
+#5 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(671): Illuminate\Foundation\Application->register()
+#6 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(651): Illuminate\Foundation\Application->registerDeferredProvider()
+#7 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(627): Illuminate\Foundation\Application->loadDeferredProvider()
+#8 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(225): Illuminate\Foundation\Application->loadDeferredProviders()
+#9 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/salman/www/examples/sample/artisan(0): {main}()
+#12 {main}  
+[2016-06-17 05:11:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::bindShared()' in /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php:36
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php(21): Illuminate\Html\HtmlServiceProvider->registerHtmlBuilder()
+#4 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(554): Illuminate\Html\HtmlServiceProvider->register()
+#5 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(671): Illuminate\Foundation\Application->register()
+#6 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(651): Illuminate\Foundation\Application->registerDeferredProvider()
+#7 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(627): Illuminate\Foundation\Application->loadDeferredProvider()
+#8 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(225): Illuminate\Foundation\Application->loadDeferredProviders()
+#9 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/salman/www/examples/sample/artisan(0): {main}()
+#12 {main}  
+[2016-06-17 05:12:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::bindShared()' in /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php:36
+Stack trace:
+#0 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/salman/www/examples/sample/vendor/illuminate/html/HtmlServiceProvider.php(21): Illuminate\Html\HtmlServiceProvider->registerHtmlBuilder()
+#4 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(554): Illuminate\Html\HtmlServiceProvider->register()
+#5 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(671): Illuminate\Foundation\Application->register()
+#6 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(651): Illuminate\Foundation\Application->registerDeferredProvider()
+#7 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(627): Illuminate\Foundation\Application->loadDeferredProvider()
+#8 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(225): Illuminate\Foundation\Application->loadDeferredProviders()
+#9 /home/salman/www/examples/sample/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/salman/www/examples/sample/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/salman/www/examples/sample/artisan(0): {main}()
+#12 {main}  
+[2016-06-17 05:18:37] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use Request as Request because the name is already in use' in /home/salman/www/examples/sample/app/Http/Controllers/SendController.php:13
+Stack trace:
+#0 {main}  
+[2016-06-17 05:25:32] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use Request as Request because the name is already in use' in /home/salman/www/examples/sample/app/Http/Controllers/SendController.php:13
+Stack trace:
+#0 {main}  
+[2016-06-17 05:30:23] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use Request as Request because the name is already in use' in /home/salman/www/examples/sample/app/Http/Controllers/SendController.php:13
+Stack trace:
+#0 {main}  
+[2016-06-17 05:34:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use Request as Request because the name is already in use' in /home/salman/www/examples/sample/app/Http/Controllers/SendController.php:13
+Stack trace:
+#0 {main}  
+[2016-06-17 05:35:59] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Input' not found' in /home/salman/www/examples/sample/app/Http/Controllers/SendController.php:17
+Stack trace:
+#0 {main}  
+[2016-06-17 05:41:36] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Input' not found' in /home/salman/www/examples/sample/app/Http/Controllers/MessageController.php:23
+Stack trace:
+#0 {main}  
