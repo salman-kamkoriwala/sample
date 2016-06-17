@@ -17,10 +17,10 @@ Route::get('/', function () {
 //end Default
 
 //Crypto Routes - ref: https://gourl.io/api-php.html
-Route::get('crypto/single', 'crypto@singlecurrency');
-Route::post('crypto/single', 'crypto@singlecurrency');
-Route::get('crypto/multi', 'crypto@multicurrency');
-Route::post('crypto/multi', 'crypto@multicurrency');
+Route::get('crypto/single', ['middleware' => 'auth', 'uses' => 'crypto@singlecurrency']);
+Route::post('crypto/single', ['middleware' => 'auth', 'uses' => 'crypto@singlecurrency']);
+Route::get('crypto/multi', ['middleware' => 'auth', 'uses' => 'crypto@multicurrency']);
+Route::post('crypto/multi', ['middleware' => 'auth', 'uses' => 'crypto@multicurrency']);
 //end Crypto
 
 //Socket Routes - ref: https://www.codetutorial.io/laravel-5-and-socket-io-tutorial/
