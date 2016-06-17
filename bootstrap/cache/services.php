@@ -23,10 +23,11 @@
     19 => 'Illuminate\\Validation\\ValidationServiceProvider',
     20 => 'Illuminate\\View\\ViewServiceProvider',
     21 => 'Collective\\Html\\HtmlServiceProvider',
-    22 => 'App\\Providers\\AppServiceProvider',
-    23 => 'App\\Providers\\AuthServiceProvider',
-    24 => 'App\\Providers\\EventServiceProvider',
-    25 => 'App\\Providers\\RouteServiceProvider',
+    22 => 'Lavary\\Menu\\ServiceProvider',
+    23 => 'App\\Providers\\AppServiceProvider',
+    24 => 'App\\Providers\\AuthServiceProvider',
+    25 => 'App\\Providers\\EventServiceProvider',
+    26 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -133,6 +134,7 @@
     'form' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
+    'menu' => 'Lavary\\Menu\\ServiceProvider',
   ),
   'when' => 
   array (
@@ -173,6 +175,9 @@
     array (
     ),
     'Collective\\Html\\HtmlServiceProvider' => 
+    array (
+    ),
+    'Lavary\\Menu\\ServiceProvider' => 
     array (
     ),
   ),

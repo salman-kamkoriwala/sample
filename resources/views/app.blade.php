@@ -53,6 +53,8 @@
 			</div>
 		</div>
 	</nav>
+	
+	@include('navigation-container')
 
 	@yield('content')
 

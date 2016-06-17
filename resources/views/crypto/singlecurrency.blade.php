@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<script src='cryptobox.min.js' type='text/javascript'></script>
+@extends('layouts.crypto')
+
+@section('title')
 <title>Insert title here</title>
-</head>
-<body>
+@endsection
+
+@section('content')
 <?= $payment_box ?>
 <?= $message ?>
-</body>
-</html>
+@endsection

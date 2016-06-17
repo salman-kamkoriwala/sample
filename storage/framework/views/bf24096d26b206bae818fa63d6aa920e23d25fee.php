@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+<title>Laravel</title>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+<!--  link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css" -->
+<link href="<?php echo e(asset('/css/app.css')); ?>" rel="stylesheet">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+<!-- Fonts -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,300'
+	rel='stylesheet' type='text/css'>
+<style>
+html, body {
+	height: 100%;
+}
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: table;
+	font-weight: 100;
+	font-family: 'Lato';
+}
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+.container {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-        
-        	<?php echo $__env->yieldContent('navigation'); ?>
-        	
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
+.content {
+	text-align: center;
+	display: inline-block;
+}
+
+.title {
+	font-size: 96px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+
+		<?php echo $__env->make('navigation-container', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		
+		<div class="content">
+			<div class="title">Laravel 5.2 with</div>
+			<div>
+				<p>CryptoPayment GoURL.io + Node + Socket.IO + Express + MySQL +
+					Events Broadcast Examples</p>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
 </html>

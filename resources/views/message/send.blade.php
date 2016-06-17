@@ -39,10 +39,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="{{ URL::to('/') }}">Simple Realtime Message</a>
+    <a class="navbar-brand" href="{{ URL::to('postMessage') }}">Simple Realtime Message</a>
   </div>
   </div>
 </nav>
+
+@include('navigation-container')
     
 <center><a href="{{ URL::to('message') }}">Click here to see the list message</a></center><br />
 <div class="container">

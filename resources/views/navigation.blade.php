@@ -1,7 +1,5 @@
-@extends('welcome')
-
-@section('navigation')
-<div id="navigation">
-	Include Test
-</div>
-@stop
+<nav class="navbar">
+  <ul class="horizontal-navbar">
+    @include('menu-items', array('items' => $MyNavBar->roots()))
+  </ul>
+</nav>

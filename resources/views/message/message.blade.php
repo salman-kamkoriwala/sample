@@ -50,6 +50,8 @@
 
   </div>
 </nav>
+
+@include('navigation-container')
     
 <div class="container">
  <div id="new-message-notif"></div>
