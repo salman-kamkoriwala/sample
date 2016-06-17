@@ -76,3 +76,6 @@ Menu::make('MyNavBar', function($menu){
 
 });
 //end Registering
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

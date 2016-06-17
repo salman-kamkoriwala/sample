@@ -1,65 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php $__env->startSection('content'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Welcome</div>
 
-<title>Laravel</title>
+                <div class="panel-body">
+                    Your Application's Landing Page.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
 
-<!--  link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css" -->
-<link href="<?php echo e(asset('/css/app.css')); ?>" rel="stylesheet">
-
-<!-- Fonts -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,300'
-	rel='stylesheet' type='text/css'>
-<style>
-html, body {
-	height: 100%;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	display: table;
-	font-weight: 100;
-	font-family: 'Lato';
-}
-
-.container {
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.content {
-	text-align: center;
-	display: inline-block;
-}
-
-.title {
-	font-size: 96px;
-}
-</style>
-</head>
-<body>
-	<div class="container">
-
-		<?php echo $__env->make('navigation-container', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-		
-		<div class="content">
-			<div class="title">Laravel 5.2 with</div>
-			<div>
-				<p>CryptoPayment GoURL.io + Node + Socket.IO + Express + MySQL +
-					Events Broadcast Examples</p>
-			</div>
-		</div>
-	</div>
-	<!-- Scripts -->
-	<script
-		src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script
-		src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
