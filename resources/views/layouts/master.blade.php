@@ -13,6 +13,8 @@
 	rel='stylesheet' type='text/css'>
 </head>
 <body>
+@include('notification')
+
 @include('navigation-container')
         
 @yield('content')

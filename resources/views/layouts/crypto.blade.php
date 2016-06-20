@@ -18,6 +18,8 @@
 <script src='cryptobox.min.js' type='text/javascript'></script>
 </head>
 <body>
+	@include('notification')
+	
 	@include('navigation-container') @yield('content')
 
 	<script

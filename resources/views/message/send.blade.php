@@ -28,6 +28,8 @@
   
   </style>
   <body>
+  	@include('notification')
+  	
     <div id="load">Please wait ...</div>
 
 <nav class="navbar navbar-default navbar-fixed-top " role="navigation">

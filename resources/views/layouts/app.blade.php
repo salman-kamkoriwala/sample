@@ -28,6 +28,9 @@
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
+        
+        	@include('notification')
+        
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->

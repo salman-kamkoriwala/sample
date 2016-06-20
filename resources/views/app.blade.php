@@ -20,6 +20,8 @@
 	<![endif]-->
 </head>
 <body>
+	@include('notification')
+	
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">

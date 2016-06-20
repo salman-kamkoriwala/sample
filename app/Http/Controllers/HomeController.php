@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+    	//\Notification::success('Login Successful!');
         return view('home');
     }
 }
